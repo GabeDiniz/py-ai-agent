@@ -16,7 +16,13 @@ Returns the current weather state for the given location.
 Example session:
 Question: Should I take an umbrella today in California?
 Thought: I need to check the weather in California first.
-Action: get_weather: California
+Action:
+{
+    "function_name": "get_weather",
+    "function_params": {
+        "city": "California"
+    }
+}
 PAUSE
 
 You will be called again with this:
